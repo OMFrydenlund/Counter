@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> <span id="counterNumber">0</p>
+    <button id="decreaseNumberButton" onclick="decreaseCountByOne()">Decrease</button>
+    <button id="increaseNumberButton" onclick="increaseCountByOne()">Increase</button>
+    </div>
+    <script>
+        // let count = 0;
+        // document.getElementById("increase").onclick = function(){
+        //     count += 1;
+        //     document.getElementById("number").innerHTML = count;
+        // }
+        // document.getElementById("decrease").onclick = function(){
+        //     count -= 1;
+        //     document.getElementById("number").innerHTML = count;
+        // }
+
+        const counterNumber = document.getElementById('counterNumber')
+
+        let count = 0;
+        updateView();
+
+        function increaseCountByOne() {
+            count++;
+            updateView();
+        }
+        function decreaseCountByOne(){
+            count--;
+            updateView();
+        }
+        function updateView(){
+            counterNumber.textContent = count;
+        }
+
+    </script>
+</body>
+
+</html>
